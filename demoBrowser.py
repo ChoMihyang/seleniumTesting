@@ -6,3 +6,4 @@ driver = webdriver.Chrome(service=service)
 
 
 driver.get("https://google.com")
+driver.close()

@@ -1,9 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.service import Service
+
 
 
 # ChromeDriver パス設定
@@ -21,13 +20,14 @@ driver.find_element(By.ID, "exampleCheck1").click()
 # Xpath　　　　　: //tagname[@attribute='value']
 # CSS Selector: tagname[attribute='value'], #id, .classname
 driver.find_element(By.CSS_SELECTOR, "input[name='name']").send_keys("hello")
+# Radiobutton
 driver.find_element(By.XPATH, "//input[@id='inlineRadio1']").click()
 
-# 定的ドロップダウン
+# Static Dropdown
 dropdown = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
 # select_by_index, select_by_visible_text, select_by_value に使用可能
-# dropdown.select_by_index(1)
-dropdown.select_by_visible_text("Male")
+# dropdown.select_by_index(1) # インデックスで選択
+dropdown.select_by_visible_text("Male") # 画面に見えるテキストで選択
 
 # submit
 driver.find_element(By.XPATH, "//input[@type='submit']").click()
