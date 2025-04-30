@@ -23,9 +23,9 @@ driver.find_element(By.CSS_SELECTOR, "input[name='name']").send_keys("hello")
 # Radiobutton
 driver.find_element(By.XPATH, "//input[@id='inlineRadio1']").click()
 
-# Static Dropdown
+# Static Dropdown: Select objectを使用して、ドロップダウンリストを操作する
 dropdown = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
-# select_by_index, select_by_visible_text, select_by_value に使用可能
+# select_by_index, select_by_visible_text, select_by_value を使用
 # dropdown.select_by_index(1) # インデックスで選択
 dropdown.select_by_visible_text("Male") # 画面に見えるテキストで選択
 
