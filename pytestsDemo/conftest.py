@@ -12,6 +12,7 @@ def dataLoad():
    print("user profile data is being created")
    return ["one", "two", "three.com"]
 
+# 複数のデータを送るには、tupleフォーマットでパラメータ化する
 @pytest.fixture(params=[("chrome", "Hi"), ("firefox", "SS"), ("IE", "DD")])
 def crossBrowser(request):
    return request.param
