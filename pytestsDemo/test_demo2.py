@@ -1,8 +1,8 @@
 import pytest
 
 @pytest.mark.smoke
-# @pytest.mark.skip
-@pytest.mark.xfail
+@pytest.mark.skip
+# @pytest.mark.xfail
 def test_firstProgram(): 
    msg = "Hello"
    assert msg == "Hi", "Test failed because strings do not match"
