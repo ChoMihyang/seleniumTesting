@@ -1,0 +1,8 @@
+import pytest
+
+# setup()に定義されたコードの実行を、Class単位で行う
+@pytest.fixture(scope="class")
+def setup():
+   print("I will be executing first")
+   yield
+   print("I will execute last")

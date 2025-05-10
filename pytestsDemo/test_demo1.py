@@ -1,6 +1,7 @@
 
 import pytest
 
+
 @pytest.mark.smoke
 def test_firstProgram(): 
    print("Hello")
