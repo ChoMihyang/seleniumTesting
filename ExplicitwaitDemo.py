@@ -31,4 +31,12 @@ wait = WebDriverWait(driver, 10)
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
 print(driver.find_element(By.CLASS_NAME, "promoInfo").text)
 
+prices = driver.find_elements(By.XPATH, "//div[@class='products']/table/tbody/tr/td[5]/p") # CSS_SELECTOR: tr td:nth-child(5) p
+amount = int(driver.find_element(By.XPATH, "//span[@class='totAmt']").text) # CSS_SELECTOR: .totAmt
+total_price = 0
+for price in prices:
+    total_price += int(price.text)
+    
+assert total_price == amount
+
 input("Press Enter to exit...")
