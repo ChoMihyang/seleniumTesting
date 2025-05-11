@@ -1,0 +1,9 @@
+2025-05-11 13:54:04,641 : DEBUG : test_logging : This is a debug message
+2025-05-11 13:54:04,641 : INFO : test_logging : This is an info message
+2025-05-11 13:54:04,641 : WARNING : test_logging : This is a warning message
+2025-05-11 13:54:04,641 : ERROR : test_logging : This is an error message
+2025-05-11 13:54:04,641 : CRITICAL : test_logging : This is a critical message
+2025-05-11 13:54:30,812 : INFO : test_logging : This is an info message
+2025-05-11 13:54:30,812 : WARNING : test_logging : This is a warning message
+2025-05-11 13:54:30,813 : ERROR : test_logging : This is an error message
+2025-05-11 13:54:30,813 : CRITICAL : test_logging : This is a critical message
