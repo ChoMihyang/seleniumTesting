@@ -7,3 +7,15 @@
 2025-05-11 13:54:30,812 : WARNING : test_logging : This is a warning message
 2025-05-11 13:54:30,813 : ERROR : test_logging : This is an error message
 2025-05-11 13:54:30,813 : CRITICAL : test_logging : This is a critical message
+2025-05-11 14:12:23,339 : INFO : baseClass : one
+2025-05-11 14:12:23,340 : INFO : baseClass : three.com
+2025-05-11 14:12:57,121 : INFO : baseClass : one
+2025-05-11 14:12:57,122 : INFO : baseClass : three.com
+2025-05-11 14:14:17,735 : INFO : test_editProfile : one
+2025-05-11 14:14:17,735 : INFO : test_editProfile : three.com
+2025-05-11 14:16:32,352 : INFO : test_editProfile : one
+2025-05-11 14:16:32,352 : INFO : test_editProfile : three.com
+2025-05-11 14:16:32,353 : INFO : test_logging : This is an info message
+2025-05-11 14:16:32,353 : WARNING : test_logging : This is a warning message
+2025-05-11 14:16:32,353 : ERROR : test_logging : This is an error message
+2025-05-11 14:16:32,353 : CRITICAL : test_logging : This is a critical message
