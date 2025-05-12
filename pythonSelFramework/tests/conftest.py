@@ -2,6 +2,11 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
+# pytestのコマンドラインオプションを追加する
+def pytest_addoption(parser):
+    parser.addoption("--browser_name", action="store", default="chrome")
+
+
 @pytest.fixture(scope="class")
 def setup(request):
     service = Service(executable_path="/usr/local/bin/chromedriver")
