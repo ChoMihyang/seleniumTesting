@@ -17,6 +17,6 @@ class CheckoutPage:
         return self.driver.find_elements(*CheckoutPage.cardFooter)
     
     def checkOutItems(self):
-        self.driver.find_elements(*CheckoutPage.checkOutBtn).click()
+        self.driver.find_element(*CheckoutPage.checkOutBtn).click()
         confirmPage = ConfirmPage(self.driver)
         return confirmPage

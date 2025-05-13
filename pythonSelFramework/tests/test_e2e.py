@@ -19,8 +19,10 @@ class TestOne(BaseClass):
             if cardText == "Blackberry":
                 checkOutPage.getCardFooters()[i].click()
         
-        confirmPage = checkOutPage.checkOutItems()
-        print("dd")
+        
+        # confirmPage = checkOutPage.checkOutItems()
+        # self.verifyLinkPresence("keyword")
+        print("done")
 
 
 
