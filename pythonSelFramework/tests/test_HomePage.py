@@ -18,7 +18,7 @@ class TestHomePage(BaseClass):
 
         alertText = homepage.getSuccessMessage().text
         
-        assert ("Success" in alertText)
+        assert ("Success abcde" in alertText)
         
         self.driver.refresh()
 
