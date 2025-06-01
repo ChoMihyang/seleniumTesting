@@ -7,10 +7,10 @@ import pytest
 class TestHomePage(BaseClass):
     def test_formSubmission(self, getData):
         homepage = Homepage(self.driver)
-        homepage.getName().send_keys(getData[0])
-        homepage.getEmail().send_keys("myname@email.com")
+        homepage.getName().send_keys(getData["name"])
+        homepage.getEmail().send_keys(getData["email"])
         homepage.getCheckbox().click()
-        self.selectOptionByText(homepage.getGender(), "Male")
+        self.selectOptionByText(homepage.getGender(), getData["gender"])
         homepage.getSubmit().click()
 
         alertText = homepage.getSuccessMessage().text
@@ -18,6 +18,6 @@ class TestHomePage(BaseClass):
         assert ("Success" in alertText)
         self.driver.refresh()
 
-    @pytest.fixture(params=[("firstN", "middleN", "lastN"),("firstN2", "middleN2", "lastN2")])
+    @pytest.fixture(params=[{"name":"myname", "email":"myemail@email.com", "gender":"Male"}, {"name":"myname2", "email":"myemail2@email.com", "gender":"Female"}])
     def getData(self, request):
         return request.param
