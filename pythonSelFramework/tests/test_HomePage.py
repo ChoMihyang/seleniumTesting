@@ -7,6 +7,8 @@ import pytest
 
 class TestHomePage(BaseClass):
     def test_formSubmission(self, getData):
+        log = self.getLogger()
+        log.info("First Name is " + getData["name"]) #必要だと思う部分にログを追加
         homepage = Homepage(self.driver)
         homepage.getName().send_keys(getData["name"])
         homepage.getEmail().send_keys(getData["email"])
@@ -17,6 +19,7 @@ class TestHomePage(BaseClass):
         alertText = homepage.getSuccessMessage().text
         
         assert ("Success" in alertText)
+        
         self.driver.refresh()
 
     @pytest.fixture(params=HomePageData.test_HomePage_data)
