@@ -1,5 +1,6 @@
 from utilities.baseClass import BaseClass
 from pageObject.homePage import Homepage
+from testData.homePageData import HomePageData
 import pytest
 
 
@@ -18,6 +19,6 @@ class TestHomePage(BaseClass):
         assert ("Success" in alertText)
         self.driver.refresh()
 
-    @pytest.fixture(params=[{"name":"myname", "email":"myemail@email.com", "gender":"Male"}, {"name":"myname2", "email":"myemail2@email.com", "gender":"Female"}])
+    @pytest.fixture(params=HomePageData.test_HomePage_data)
     def getData(self, request):
         return request.param
